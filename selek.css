@@ -1,0 +1,50 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.selek-wrapper{
+	width: 200px;
+	position: relative;
+}
+
+.selek-wrapper .selek-title{
+	color: #000;
+	font-size: 16px;
+	line-height: 34px;
+	width: 100%;
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid #d6d6d6;
+}
+
+.selek-wrapper .selek-title:before{
+	content: '▼';
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	float: right;
+}
+
+.selek-wrapper .selek-list{
+	background-color: #FFF;
+	width: 100%;
+	display: none;
+	padding: 10px;
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+.selek-wrapper.is-opened .selek-list{
+	display: block;
+}
+
+.selek-wrapper ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
