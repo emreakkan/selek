@@ -2,23 +2,49 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Selek V1.2.3.4.5.6.7.8.9</title>
+	<title>Selek.JS V1</title>
 	<link rel="stylesheet" href="selek.css">
 	<script src="jquery-3.2.1.min.js"></script>
 	<script src="selek.js"></script>
 </head>
 <body>
-	<select class="selek">
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4" selected>4</option>
-		<option value="5">5</option>
-		<option value="6">6</option>
-		<option value="7">7</option>
-		<option value="8">8</option>
-		<option value="9">9</option>
-		<option value="10">10</option>
-	</select>
+	<div>
+		<select class="selek">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4" selected>4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+	</div>
+	<div>
+		<select class="selek">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9" selected>9</option>
+			<option value="10">10</option>
+		</select>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('.selek').selek({
+				class: 'selek-boss',
+				isSearch: true,
+				searchPlace: 'Arama Yapınız...',
+				addNewItem: true
+			});
+		});
+	</script>
 </body>
 </html>
