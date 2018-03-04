@@ -1,8 +1,8 @@
 Select replacement plugin.
 
 $('.selek').selek({
-	searchEnable: true,
-	addSearched: true
+	class: 'selek-boss',
+	isSearch: true,
+	searchPlace: 'Arama Yapınız...',
+	addNewItem: true
 });
-
-Demo [emreakkan.com/selek](https://emreakkan.com/selek)
