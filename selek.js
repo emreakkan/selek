@@ -82,14 +82,14 @@ $.fn.selek = function(params){
 					}
 				}
 
-				if(count == 0 && searchString != '' && e.keyCode === 13){
+				if(option.addNewItem === true && count == 0 && searchString != '' && e.keyCode === 13){
 					elem.append('<option value="' + searchString + '">' + searchString + '</option>');
 					elementOpt = elem.children();
 
 					var newLi = document.createElement('li');
 					newLi.innerText = searchString;
 					newLi.setAttribute('data-value', searchString);
-					newLi.setAttribute('data-index', elementOpt.length);
+					newLi.setAttribute('data-index', elementOpt.length-1);
 					selekUL.appendChild(newLi);
 				}
 			}
@@ -127,6 +127,11 @@ $.fn.selek = function(params){
 		function toggle(){
 			$('.selek-wrapper').not($(selekWrapper)).removeClass(classList.openClass);
 			selekWrapper.classList.toggle(classList.openClass);
+
+			if(option.isSearch === true && option.addNewItem === true){
+				$(searchInput).val('');
+				$(selekUL).find('li').removeAttr('style');
+			}
 		}
 	});
 }
